@@ -43,6 +43,7 @@ servers:
         profile: PP-VLAN20                              # Port profile to apply (required)
         port_channel:
           mode: active
+<<<<<<< HEAD
 
 ##################################################################
 # WAN/Core Edge Links
@@ -70,3 +71,5 @@ core_interfaces:
       nodes: [ s1-spine2, WANCORE ]
       interfaces: [ Ethernet8, Ethernet2 ]
       include_in_underlay_protocol: true
+=======
+>>>>>>> upstream/cicd-ff

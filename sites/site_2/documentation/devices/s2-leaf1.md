@@ -12,7 +12,10 @@
   - [AAA Authorization](#aaa-authorization)
 - [Monitoring](#monitoring)
   - [TerminAttr Daemon](#terminattr-daemon)
+<<<<<<< HEAD
   - [Logging](#logging)
+=======
+>>>>>>> upstream/cicd-ff
 - [MLAG](#mlag)
   - [MLAG Summary](#mlag-summary)
   - [MLAG Device Configuration](#mlag-device-configuration)
@@ -21,7 +24,11 @@
   - [Spanning Tree Device Configuration](#spanning-tree-device-configuration)
 - [Internal VLAN Allocation Policy](#internal-vlan-allocation-policy)
   - [Internal VLAN Allocation Policy Summary](#internal-vlan-allocation-policy-summary)
+<<<<<<< HEAD
   - [Internal VLAN Allocation Policy Device Configuration](#internal-vlan-allocation-policy-device-configuration)
+=======
+  - [Internal VLAN Allocation Policy Configuration](#internal-vlan-allocation-policy-configuration)
+>>>>>>> upstream/cicd-ff
 - [VLANs](#vlans)
   - [VLANs Summary](#vlans-summary)
   - [VLANs Device Configuration](#vlans-device-configuration)
@@ -70,7 +77,11 @@ interface Management0
 
 ### DNS Domain
 
+<<<<<<< HEAD
 DNS domain: atd.lab
+=======
+#### DNS domain: atd.lab
+>>>>>>> upstream/cicd-ff
 
 #### DNS Domain Device Configuration
 
@@ -110,7 +121,11 @@ ntp server 192.168.0.1 iburst local-interface Management0
 | -------- | -------- | -------- |
 | default | - | - |
 
+<<<<<<< HEAD
 #### Management API HTTP Device Configuration
+=======
+#### Management API HTTP Configuration
+>>>>>>> upstream/cicd-ff
 
 ```eos
 !
@@ -175,6 +190,7 @@ daemon TerminAttr
    no shutdown
 ```
 
+<<<<<<< HEAD
 ### Logging
 
 #### Logging Servers and Features Summary
@@ -200,13 +216,19 @@ logging host 10.200.1.108
 logging source-interface Management0
 ```
 
+=======
+>>>>>>> upstream/cicd-ff
 ## MLAG
 
 ### MLAG Summary
 
 | Domain-id | Local-interface | Peer-address | Peer-link |
 | --------- | --------------- | ------------ | --------- |
+<<<<<<< HEAD
 | RACK1 | Vlan4094 | 10.2.253.1 | Port-Channel1 |
+=======
+| RACK1 | Vlan4094 | 10.2.253.5 | Port-Channel1 |
+>>>>>>> upstream/cicd-ff
 
 Dual primary detection is disabled.
 
@@ -217,7 +239,11 @@ Dual primary detection is disabled.
 mlag configuration
    domain-id RACK1
    local-interface Vlan4094
+<<<<<<< HEAD
    peer-address 10.2.253.1
+=======
+   peer-address 10.2.253.5
+>>>>>>> upstream/cicd-ff
    peer-link Port-Channel1
    reload-delay mlag 300
    reload-delay non-mlag 330
@@ -256,7 +282,11 @@ spanning-tree mst 0 priority 16384
 | ------------------| --------------- | ------------ |
 | ascending | 1006 | 1199 |
 
+<<<<<<< HEAD
 ### Internal VLAN Allocation Policy Device Configuration
+=======
+### Internal VLAN Allocation Policy Configuration
+>>>>>>> upstream/cicd-ff
 
 ```eos
 !
@@ -384,7 +414,11 @@ interface Port-Channel4
 
 | Interface | VRF | IP Address | IP Address Virtual | IP Router Virtual Address | VRRP | ACL In | ACL Out |
 | --------- | --- | ---------- | ------------------ | ------------------------- | ---- | ------ | ------- |
+<<<<<<< HEAD
 | Vlan4094 |  default  |  10.2.253.0/31  |  -  |  -  |  -  |  -  |  -  |
+=======
+| Vlan4094 |  default  |  10.2.253.4/31  |  -  |  -  |  -  |  -  |  -  |
+>>>>>>> upstream/cicd-ff
 
 #### VLAN Interfaces Device Configuration
 
@@ -395,7 +429,11 @@ interface Vlan4094
    no shutdown
    mtu 1500
    no autostate
+<<<<<<< HEAD
    ip address 10.2.253.0/31
+=======
+   ip address 10.2.253.4/31
+>>>>>>> upstream/cicd-ff
 ```
 
 ## Routing
@@ -435,8 +473,13 @@ service routing protocols model multi-agent
 
 #### Static Routes Summary
 
+<<<<<<< HEAD
 | VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
 | --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
+=======
+| VRF | Destination Prefix | Next Hop IP             | Exit interface      | Administrative Distance       | Tag               | Route Name                    | Metric         |
+| --- | ------------------ | ----------------------- | ------------------- | ----------------------------- | ----------------- | ----------------------------- | -------------- |
+>>>>>>> upstream/cicd-ff
 | default | 0.0.0.0/0 | 192.168.0.1 | - | 1 | - | - | - |
 
 #### Static Routes Device Configuration
